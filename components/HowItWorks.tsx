@@ -39,8 +39,8 @@ export default function HowItWorks() {
   return (
     <div className='grid md:grid-cols-4 gap-2 mx-auto grid-cols-2 sm:mx-2 '>
         {
-            procedural.map(()=> 
-    <Card className='flex flex-col '>
+            procedural.map(({title})=> 
+    <Card key={title} className='flex flex-col '>
   <CardHeader>
     <CardTitle className='flex justify-center'>01</CardTitle>
     <CardDescription className='font-bold text-2xl text-center capitalize'>contact us for pick up</CardDescription>
