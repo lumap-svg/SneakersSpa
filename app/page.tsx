@@ -1,10 +1,10 @@
 import Display from "@/components/Display";
 import HowItWorks from "@/components/HowItWorks";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <div>
+      {/* https://www.pinterest.com/pin/shoe-clean-service-landing-page--1054264594003232096/ */}
     <header></header>
     <main className=" max-w-6xl mx-auto ">
       {/* welcoming heros landing page */}

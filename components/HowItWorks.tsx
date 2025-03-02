@@ -7,7 +7,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { link } from 'fs'
 
 export default function HowItWorks() {
     const procedural =[
@@ -15,25 +14,25 @@ export default function HowItWorks() {
             title: 1,
             description:"contact us for pick up",
             content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            link:"contact"
+            connect:"contact"
         },
         {
             title: 2,
             description:"contact us for pick up",
             content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            link:"contact"
+            connect:"contact"
         },
         {
             title: 3,
             description:"contact us for pick up",
             content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            link:"contact"
+            connect:"contact"
         },
         {
             title: 4,
             description:"contact us for pick up",
             content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            link:"contact"
+            connect:"contact"
         },
     ]
     
