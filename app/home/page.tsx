@@ -1,4 +1,3 @@
-import Display from '@/components/display'
 import React from 'react'
 
 export default function page() {
@@ -18,7 +17,7 @@ export default function page() {
         </header>
             <hr className='font-bold w-full'/>
             <main>
-                <Display />
+                
             </main>
         </div>
   )
