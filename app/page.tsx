@@ -1,4 +1,3 @@
-import Display from "@/components/Display";
 import Heroslanding from "@/components/heroslanding";
 import HowItWorks from "@/components/HowItWorks";
 import Image from "next/image";
