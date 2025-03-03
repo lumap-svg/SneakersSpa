@@ -1,15 +1,24 @@
 import Display from "@/components/Display";
+import Heroslanding from "@/components/heroslanding";
 import HowItWorks from "@/components/HowItWorks";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div >
       {/* https://www.pinterest.com/pin/shoe-clean-service-landing-page--1054264594003232096/ */}
-    <header></header>
-    <main className=" max-w-6xl mx-auto ">
+    <header className="flex items-center gap-2 flex-grow">
+      
+                  <Image className='rounded-full mt-3 bg-white' src={'/sneakers spa 254.jpeg'} alt={'company log'} width={200} height={200} />
+                  <h2 className="text-4xl font-bold uppercase">Sneakers spa 254  </h2>
+                 <button className="ml-auto uppercase font-semibold border-2 p-2 px-3 border-blue-500 rounded-full text-white">login</button>
+      
+    </header>
+    <main className=" max-w-6xl mx-auto mt-4 ">
+
       {/* welcoming heros landing page */}
       
-      <Display />
+      <Heroslanding />
       {/* procedure of how operations work */}
       <HowItWorks />
       {/* services offered */}

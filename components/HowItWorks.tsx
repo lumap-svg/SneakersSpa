@@ -10,89 +10,56 @@ import {
 
 export default function HowItWorks() {
     const procedural =[
-        {
-            title: 1,
-            description:"contact us for pick up",
-            content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            connect:"contact"
-        },
-        {
-            title: 2,
-            description:"contact us for pick up",
-            content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            connect:"contact"
-        },
-        {
-            title: 3,
-            description:"contact us for pick up",
-            content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            connect:"contact"
-        },
-        {
-            title: 4,
-            description:"contact us for pick up",
-            content:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?",
-            connect:"contact"
-        },
+      {
+          position:1,
+          title: "Pick-Up",
+          description:"We come to you!",
+          content:  "Our rider picks up your sneakers at your doorstep, ensuring convenience and a hassle-free experience",
+          connect:"contact"
+      },
+      {
+          position:2,
+          title: "Advanced Cleaning Machines",
+          description:"High-tech machines for the perfect clean.",
+          content:  "Our state-of-the-art machines gently wash and dry all kinds of sneakers, from your beloved running shoes to your high-end designer kicks.",
+          connect:"more details"
+      },
+      {
+          position:3,
+          title: "Quick Turnaround",
+          description:"Time is precious, we get it",
+          content:  "In just 2 hours, your shoes are cleaned, dried, and ready for wear—no more waiting days for shoe cleaning services!",
+          connect:"more details"
+      },
+      {
+          position:4,
+          title: " drop-Off",
+          description:"We come to you!",
+          content:  "Once cleaned, we drop them back to you, so you don’t have to leave the comfort of your home.",
+          connect:"contact"
+      },
+      
     ]
     
   return (
     <div className='grid md:grid-cols-4 gap-2 mx-auto grid-cols-2 sm:mx-2 '>
         {
-            procedural.map(({title})=> 
-    <Card key={title} className='flex flex-col '>
+            procedural.map(({position,title,description,connect,content})=> 
+    <Card key={position} className='flex flex-col justify-between hover:bg-gray-700'>
   <CardHeader>
-    <CardTitle className='flex justify-center'>01</CardTitle>
-    <CardDescription className='font-bold text-2xl text-center capitalize'>contact us for pick up</CardDescription>
+    <CardTitle className='flex justify-center font-bold text-2xl  '>{position}</CardTitle>
+    <CardDescription className='text-2xl font-semibold text-center'>{title}</CardDescription>
+    <CardDescription className='font-semibold text-lg text-center'>{description}</CardDescription>
   </CardHeader>
   <CardContent className=''>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo beatae itaque vitae neque! Soluta fugiat nesciunt amet, voluptatum reiciendis minus nam delectus repellendus assumenda! Earum reiciendis ratione provident placeat recusandae?</p>
+    <p>{content}</p>
   </CardContent>
   <CardFooter className='flex justify-center font-semibold text-2xl'>
-    <a href="/contact">contact</a>
+    <a href="/contact">{connect} {'>'} </a>
   </CardFooter>
 </Card>
 )
 }
-{/* 
-<Card>
-  <CardHeader>
-    <CardTitle>02</CardTitle>
-    <CardDescription>Your shoes are picked up</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod quisquam at aut distinctio quidem in accusamus, quis iusto nostrum! Nam animi quae quo corporis, et quisquam voluptatem eveniet quibusdam sequi! </p>
-  </CardContent>
-  <CardFooter>
-    <p>more details</p>
-  </CardFooter>
-</Card>
-
-<Card>
-  <CardHeader>
-    <CardTitle>03</CardTitle>
-    <CardDescription>Cleaning process</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, officia! Soluta sit expedita aperiam perspiciatis laudantium dolor eveniet consequuntur aut quos ab quas nostrum hic impedit, qui sapiente quibusdam minima.</p>
-  </CardContent>
-  <CardFooter>
-    <p>more details</p>
-  </CardFooter>
-</Card>
-<Card>
-  <CardHeader>
-    <CardTitle>04.</CardTitle>
-    <CardDescription>Ready to be deliveredto you</CardDescription>
-  </CardHeader>
-  <CardContent>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reiciendis veniam, ab cumque, incidunt nostrum, error molestiae ea pariatur consectetur odio? Aliquid provident cupiditate nisi, itaque in aut repudiandae voluptatibus.</p>
-  </CardContent>
-  <CardFooter>
-    <p>contact</p>
-  </CardFooter>
-</Card> */}
-
 
     </div>
 
