@@ -1,8 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-export default function 
-() {
+export default function  Heroslanding() {
   return (
     <div className='flex  my-3 bg-gray-200 gap-2 rounded-lg'>
         {/* image */}
