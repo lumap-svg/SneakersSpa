@@ -47,17 +47,17 @@ export default function HowItWorks() {
     <div className='grid md:grid-cols-4 gap-2 mx-auto grid-cols-2 sm:mx-2 '>
         {
           procedural.map(({position,title,description,connect,content})=> 
-            <Card key={position} className='flex flex-col justify-between hover:bg-gray-700'>
+            <Card key={position} className='flex flex-col justify-between bg-none hover:bg-gray-700'>
   <CardHeader>
     <CardTitle className='flex justify-center font-bold text-2xl  '>{position}</CardTitle>
     <CardDescription className='text-2xl font-semibold text-center'>{title}</CardDescription>
     <CardDescription className='font-semibold text-lg text-center'>{description}</CardDescription>
   </CardHeader>
-  <CardContent className=''>
+  <CardContent className='font-medium'>
     <p>{content}</p>
   </CardContent>
   <CardFooter className='flex justify-center font-semibold text-2xl'>
-    <a href="/contact">{connect} {'>'} </a>
+    <a href="/contact" className='border border-[#ebd455f8] px-2 py-1 rounded-full text-blue-500 capitalize'>{connect} {'>'} </a>
   </CardFooter>
 </Card>
 )
