@@ -10,7 +10,7 @@ export default function  Heroslanding() {
                 <div className=' flex flex-col justify-around'>
                     <h1 className='text-5xl font-bold text-left'>Give Your Sneakers the Spa Treatment They Deserve!</h1>
                     <h3 className='text-3xl font-semibold '>Machine-washed, dried, and ready in just 2 hours.</h3>
-                    <button className='rounded-full border border-[#52480ff8]  w-[200]  p-3 '>Get Started {">"}</button>
+                    <button className='rounded-full border border-[#52480ff8] max-w-max  p-3 '>Get Started {">"}</button>
                 </div>
     </div>
   )
