@@ -42,10 +42,12 @@ export default function HowItWorks() {
     ]
     
   return (
+    <div >
+<h2 className='text-3xl pl-5 my-3 font-bold uppercase text-[#ebd455f8]' >how it works</h2>
     <div className='grid md:grid-cols-4 gap-2 mx-auto grid-cols-2 sm:mx-2 '>
         {
-            procedural.map(({position,title,description,connect,content})=> 
-    <Card key={position} className='flex flex-col justify-between hover:bg-gray-700'>
+          procedural.map(({position,title,description,connect,content})=> 
+            <Card key={position} className='flex flex-col justify-between hover:bg-gray-700'>
   <CardHeader>
     <CardTitle className='flex justify-center font-bold text-2xl  '>{position}</CardTitle>
     <CardDescription className='text-2xl font-semibold text-center'>{title}</CardDescription>
@@ -62,6 +64,7 @@ export default function HowItWorks() {
 }
 
     </div>
+</div>
 
   )
 }
