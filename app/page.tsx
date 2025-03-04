@@ -13,7 +13,7 @@ export default function Home() {
                  <button className="ml-auto uppercase font-semibold border-2 p-2 px-3 border-blue-500 rounded-full text-[#ebd455f8]">login</button>
       
     </header>
-    <hr className="w-full mx-1"/>
+    <hr className="w-full mx-1 border border-[#ebd455f8] " />
     <main className=" max-w-6xl mx-auto mt-4 ">
 
       {/* welcoming heros landing page */}

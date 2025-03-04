@@ -42,7 +42,7 @@ export default function HowItWorks() {
     ]
     
   return (
-    <div >
+    <div  className='border rounded-md border-[#ebd455f8] p-2'>
 <h2 className='text-3xl pl-5 my-3 font-bold uppercase text-[#ebd455f8]' >how it works</h2>
     <div className='grid md:grid-cols-4 gap-2 mx-auto grid-cols-2 sm:mx-2 '>
         {
