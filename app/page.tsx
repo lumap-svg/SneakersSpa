@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Heroslanding from "@/components/heroslanding";
 import HowItWorks from "@/components/HowItWorks";
 import Image from "next/image";
@@ -6,13 +7,28 @@ export default function Home() {
   return (
     <div >
       {/* https://www.pinterest.com/pin/shoe-clean-service-landing-page--1054264594003232096/ */}
-    <header className="flex items-center gap-2 flex-grow mb-1">
-      
-                  <Image className='rounded-full mt-3 bg-white' src={'/sneakers spa 254.jpeg'} alt={'company log'} width={200} height={200} />
-                  <h2 className="text-4xl font-bold uppercase text-[#ebd455f8] ">Sneakers spa 254  </h2>
-                 <button className="ml-auto uppercase font-semibold border-2 p-2 px-3 border-blue-500 rounded-full text-[#ebd455f8]">login</button>
-      
-    </header>
+ 
+    <header className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 m-2">
+        {/* Logo */}
+        <div className="flex items-center gap-3">
+          <Image
+            className="rounded-full bg-white"
+            src="/sneakers spa 254.jpeg"
+            alt="Company Logo"
+            width={100}
+            height={100}
+            layout="intrinsic"
+          />
+          <h2 className="text-2xl sm:text-4xl font-bold uppercase text-[#ebd455f8]">
+            Sneakers Spa 254
+          </h2>
+        </div>
+
+        {/* Login Button */}
+        <button className="ml-auto mt-3 sm:mt-0 uppercase font-semibold border-2 p-2 px-4 border-blue-500 rounded-full text-[#ebd455f8]">
+          Login
+        </button>
+      </header>
     <hr className="w-full mx-1 border border-[#ebd455f8] " />
     <main className=" max-w-6xl mx-auto mt-4 ">
 
@@ -39,6 +55,7 @@ export default function Home() {
         {/* phone */}
         {/* email */}
         {/* social media links */}
+        <Footer />
     </footer>
     </div>  );
 }
