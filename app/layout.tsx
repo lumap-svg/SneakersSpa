@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sneakers Spa",
+  title: "Sneakers Spa 254",
   description: "shoe care services",
 };
 
