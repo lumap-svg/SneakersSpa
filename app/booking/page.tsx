@@ -1,9 +1,17 @@
+import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import React from 'react';
+import { FaAngleLeft } from 'react-icons/fa6';
 
 export default function Page() {
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
+     <div className='flex'>
+      <Link href={'/'}>
+      <FaAngleLeft className='text-3xl' />
+      </Link>
       <h1 className="text-2xl font-bold text-center mb-4">Ready to give your sneakers the spa treatment?</h1>
+     </div>
       <form className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold">Name</label>
