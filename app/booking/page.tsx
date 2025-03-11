@@ -1,42 +1,16 @@
-"use client"
-import React, { useState } from 'react';
+import React from 'react';
 
 export default function Page() {
-  const [formData, setFormData] = useState({
-    name: '',
-    phoneNumber: '',
-    address: '',
-    dropOffDate: '',
-    serviceType: '',
-    specialRequests: '',
-  });
-
-  const handleChange = (e:any) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    console.log(formData);
-    // Handle form submission logic here
-  };
-
   return (
     <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
       <h1 className="text-2xl font-bold text-center mb-4">Ready to give your sneakers the spa treatment?</h1>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold">Name</label>
           <input
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
             required
           />
@@ -48,8 +22,6 @@ export default function Page() {
             type="tel"
             id="phoneNumber"
             name="phoneNumber"
-            value={formData.phoneNumber}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
             required
           />
@@ -61,8 +33,6 @@ export default function Page() {
             type="text"
             id="address"
             name="address"
-            value={formData.address}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
             required
           />
@@ -74,8 +44,6 @@ export default function Page() {
           <select
             id="serviceType"
             name="serviceType"
-            value={formData.serviceType}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
             required
           >
@@ -93,8 +61,6 @@ export default function Page() {
             type="date"
             id="dropOffDate"
             name="dropOffDate"
-            value={formData.dropOffDate}
-            onChange={handleChange}
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
           />
         </div>
@@ -105,8 +71,6 @@ export default function Page() {
           <textarea
             id="specialRequests"
             name="specialRequests"
-            value={formData.specialRequests}
-            onChange={handleChange}
             // rows=3
             className="w-full p-2 border border-gray-300 rounded-md mt-1"
           />
