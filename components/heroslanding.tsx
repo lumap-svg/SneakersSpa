@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Heroslanding() {
@@ -27,9 +28,9 @@ export default function Heroslanding() {
         <h3 className="text-lg md:text-2xl font-semibold text-gray-600 mb-6">
           Machine-washed, dried, and ready in just 2 hours.
         </h3>
-        <button onClick={() =>'/booking'} className="w-max mx-auto md:mx-0 rounded-full border border-[#52480ff8] bg-yellow-500 text-white px-6 py-3 text-lg font-semibold transition transform hover:scale-105 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50">
+        <Link href={'/booking'} className="w-max mx-auto md:mx-0 rounded-full border border-[#52480ff8] bg-yellow-500 text-white px-6 py-3 text-lg font-semibold transition transform hover:scale-105 hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-opacity-50">
           Get Started {">"}
-        </button>
+        </Link>
       </div>
     </div>
   );
