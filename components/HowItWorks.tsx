@@ -33,7 +33,7 @@ export default function HowItWorks() {
   ];
 
   return (
-    <div className='border rounded-lg border-[#ebd455f8] p-4 bg-white'>
+    <div className='border rounded-lg shadow-xl border-[#ebd455f8] p-4 '>
       <h2 className='text-3xl text-center my-5 font-bold uppercase text-[#ebd455f8]'>How It Works</h2>
       
       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
