@@ -6,7 +6,7 @@ import React from 'react'
     <div className='border border-[#e3d479f8] rounded-md flex  flex-grow justify-between flex-col items-center'>
         <CHeader title={title} position={position} descr ={description}  />
         <CBody content={content} />
-        <CFooter linker={linker} />
+        <CFooter />
     </div>
   )
 }
@@ -20,7 +20,7 @@ const CHeader =({position, descr, title}:{position:number, descr:string, title:s
 const CBody= ({content}:{content:string}) =>{
     return <p className='mx-1 p-2 grow text-white line-clamp-5 md:line-clamp-none '>{content}</p>
 }
-function CFooter({linker}:{linker:string}){
+function CFooter(){
     return <div className='flex grow'></div>
     // <a className='border text-blue-500 px-2 py-1 rounded-lg max-w-max m-3  ' href="/contact"> {linker} </a>
 }
