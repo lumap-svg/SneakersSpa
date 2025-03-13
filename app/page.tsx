@@ -30,7 +30,7 @@ export default function Home() {
         </button>
       </header>
     <hr className="w-full mx-1 border border-[#ebd455f8] " />
-    <main className=" max-w-6xl mx-auto mt-4 ">
+    <main className="max-w-6xl mx-auto mt-4 ">
 
       {/* welcoming heros landing page */}
       
