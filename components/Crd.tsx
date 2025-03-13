@@ -1,7 +1,7 @@
 import React from 'react'
 
 
- const Crd:React.FC<Crd> =({position, linker, content, description, title}) => {
+ const Crd:React.FC<Crd> =({position, content, description, title}) => {
   return (
     <div className='border border-[#e3d479f8] rounded-md flex  flex-grow justify-between flex-col items-center'>
         <CHeader title={title} position={position} descr ={description}  />
