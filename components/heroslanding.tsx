@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function Heroslanding() {
   return (
-    <div className="flex flex-col md:flex-row my-6 pr-4 md:pr-12 bg-opacity-0  rounded-lg shadow-lg overflow-hidden">
+    <div className="flex flex-col md:flex-row my-6 pr-4 md:pr-12  rounded-lg shadow-lg overflow-hidden">
       {/* Image */}
       <div className="relative w-full md:w-1/2 mb-6 md:mb-0">
         <Image

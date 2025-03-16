@@ -43,7 +43,7 @@ function Footer() {
             <ul className="space-y-2">
               <li>🏠 Home</li>
               <li>🛠️ Services</li>
-              <li>📅 Book Now</li>
+              <li> 📅 Book Now</li>
             </ul>
           </div>
   
