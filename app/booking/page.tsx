@@ -4,14 +4,15 @@ import { FaAngleLeft } from 'react-icons/fa6';
 
 export default function Page() {
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-md">
+    <div className="max-w-6xl mx-auto p-6 mt-10 bg-white shadow-md rounded-md">
      <div className='flex'>
       <Link href={'/'}>
       <FaAngleLeft className='text-3xl' />
       </Link>
       <h1 className="text-2xl font-bold text-center mb-4">Ready to give your sneakers the spa treatment?</h1>
      </div>
-      <form className="space-y-4">
+      <form className=" grid grid-cols-2 gap-3">
+      <div className='space-y-4'>
         <div>
           <label htmlFor="name" className="block text-sm font-semibold">Name</label>
           <input
@@ -44,7 +45,8 @@ export default function Page() {
             required
           />
         </div>
-
+</div>
+<div className='space-y-2'>
         {/* Service Type */}
         <div>
           <label htmlFor="serviceType" className="block text-sm font-semibold">Service Type</label>
@@ -91,6 +93,7 @@ export default function Page() {
           >
             Submit
           </button>
+        </div>
         </div>
       </form>
     </div>
