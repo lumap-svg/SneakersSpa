@@ -1,10 +1,8 @@
 import React from 'react'
 import { InputComponent } from './InputComponent'
 import Link from 'next/link'
-import { signup } from '@/app/actions/auth'
-
 export default function SignIn() {
-  let name:string = 'peter' 
+  const  name:string = 'peter' 
   return (
     
     <>{name ? <SignUp /> :<p>not avalab</p>}</>
