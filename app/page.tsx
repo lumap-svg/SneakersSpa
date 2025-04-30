@@ -2,8 +2,6 @@ import Footer from "@/components/footer";
 import Header from "@/components/Header";
 import Heroslanding from "@/components/heroslanding";
 import HowItWorks from "@/components/HowItWorks";
-import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
