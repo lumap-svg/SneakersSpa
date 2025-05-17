@@ -4,9 +4,10 @@ import React from 'react'
 export default function page() {
   return (
     
-      <main className='border bg-white rounded-md h-full'>
+      <main className='border bg-white rounded-md h-screen'>
         <header className='bg-gray-200 p-2 rounded-sm w-[98%] mx-auto flex items-center justify-around shadow-md mt-1'>
           <Image src={'/sneakers spa 254.jpeg'} width={50} height={50} alt='company logo' className='rounded-full'/>
+        
           <ul className='flex gap-3 capitalize font-semibold'>
             <li>Dashboard</li>
             <li className='text-blue-600'>Orders</li>
