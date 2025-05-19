@@ -1,17 +1,18 @@
-import React from 'react'
+'use client'
+import React, { useActionState } from 'react'
 import { InputComponent } from './InputComponent'
 import Link from 'next/link'
+import { signup } from '@/app/actions/auth'
 export default function SignIn() {
-  const  name:string = 'peter' 
+  const  name:string = 'sfdyus' 
   return (
     
-    <>{name ? <SignUp /> :<p>not avalab</p>}</>
+    <>{name ? <SignUp /> : <SignInto />}</>
   
   )
 }
 export function SignInto(){
-  return
-  (
+  return(
     <div className='w-full grid grid-cols-2 border py-3 px-2 rounded-md'>
     <div className='flex justify-center items-center bg-gray-400'>
 
@@ -33,22 +34,21 @@ export function SignInto(){
   )
 }
 export function SignUp(){
-  // const [state, action, pending] = useActionState(signup, undefined)
+  const [state, action, pending] = useActionState(signup,undefined)
 
   return(
     <div className='w-full grid sm:grid-cols-2  bg-gray-600 py-3 px-2 rounded-md'>
     <div className=' flex justify-center items-center '>
     <h2  className='text-center uppercase font-bold'>sign up</h2>
     </div>
-    <form className='space-y-4 w-full flex flex-col backdrop-blur-md shadow-md rounded-md mx-auto p-2 gap-1' >
-    {/* {state?.errors?.name && <p>{state.errors.name}</p>} */}
+    <form action={action} className='space-y-4 w-full flex flex-col backdrop-blur-md shadow-md rounded-md mx-auto p-2 gap-1' >
 
    
         <div ><label htmlFor="name"></label><InputComponent type='name' placeholder='name' /> </div>
         <div><label htmlFor="email"></label><InputComponent type='email' placeholder='email' /></div>
-        <div><label htmlFor="email"></label><InputComponent type='password ' placeholder='new password'/> </div>
-        <div><label htmlFor="email"></label><InputComponent type='password ' placeholder=' confirm password'/> </div>
-        <div className='grid grid-cols-2 gap-2'>
+        <div><label htmlFor="email"></label><InputComponent type='password' placeholder='new password'/> </div>
+        <div><label htmlFor="email"></label><InputComponent type='password' placeholder=' confirm password'/> </div>
+        <div className='grid md:grid-cols-2 gap-2'>
         <button className='border border-blue-500 p-2 px-3 rounded-md font-semibold' type="submit">Sign In</button>
         <button className='border border-blue-500 p-2 px-3 rounded-md font-semibold' type="submit">Sign Up</button>
 

@@ -1,25 +1,32 @@
-
 'use server'
 
-import { FormState } from "@/lib/definitions"
+import { FormState, SignupFormSchema } from "@/lib/definitions"
 
 export async function signup(state:FormState, formData: FormData) {
-    
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const password = formData.get('password')
-    const confirmPassword = formData.get('confirmPassword')
+
+    const validatedFields = SignupFormSchema.safeParse({
+        name:formData.get('name'),
+        email:formData.get('email'),
+        password :formData.get('password'),
+    })
     
     // Validate the data
-    if (!name || !email || !password || !confirmPassword) {
-        return { error: 'All fields are required' }
+    if (!validatedFields.success) {
+            console.log("validation of form fields are invalid")
+
+        return { error: validatedFields.error.flatten().fieldErrors }
     }
+    else {
+    console.log("form data validation was a success")
+  }
+    // if (password !== confirmPassword) {
+    //     return { error: 'Passwords do not match' }
+    // }
     
-    if (password !== confirmPassword) {
-        return { error: 'Passwords do not match' }
+    // // Simulate a signup process
+    // console.log('User signed up with:', { validatedFields. , email, password })
+    // return { success: true }
+        return {
+        message: 'Account created successfully!',
     }
-    
-    // Simulate a signup process
-    console.log('User signed up with:', { name, email, password })
-    return { success: true }
 }
