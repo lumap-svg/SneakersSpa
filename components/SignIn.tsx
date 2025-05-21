@@ -4,7 +4,7 @@ import { InputComponent } from './InputComponent'
 import Link from 'next/link'
 import { signup } from '@/app/actions/auth'
 export default function SignIn() {
-  const  name:string = 'sfdyus' 
+  const  name:string = 'gdfg' 
   return (
     
     <>{name ? <SignUp /> : <SignInto />}</>

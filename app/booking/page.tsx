@@ -4,46 +4,30 @@ import { FaAngleLeft } from 'react-icons/fa6';
 
 export default function Page() {
   return (
-    <div className="max-w-6xl mx-auto p-6 mt-10 bg-white shadow-md rounded-md">
+    <div className="max-w-6xl h-full   mx-auto p-6 mt-10 border border-white text-white shadow-md rounded-md relative   ">
+      {/* heading */}
      <div className='flex'>
-      <Link href={'/'}>
-      <FaAngleLeft className='text-3xl' />
-      </Link>
+      <Link href={'/'}> <FaAngleLeft className='text-3xl' />  </Link>
       <h1 className="text-2xl font-bold text-center mb-4">Ready to give your sneakers the spa treatment?</h1>
      </div>
+     {/* booking form */}
       <form className=" grid grid-cols-2 gap-3">
-      <div className='space-y-4'>
+        {/* div one parent container */}
+      <div className='space-y-4 border border-gray-500 '>
+        {/* first input  for customer name*/}
         <div>
           <label htmlFor="name" className="block text-sm font-semibold">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="w-full p-2 border border-gray-300 rounded-md mt-1"
-            required
-          />
+          <input  type="text"   id="name" name="name" className="w-full p-2 border border-gray-300 rounded-md mt-1" required />
         </div>
-
+{/* second input  for client contact number*/}
         <div>
           <label htmlFor="phoneNumber" className="block text-sm font-semibold">Phone Number</label>
-          <input
-            type="tel"
-            id="phoneNumber"
-            name="phoneNumber"
-            className="w-full p-2 border border-gray-300 rounded-md mt-1"
-            required
-          />
+          <input type="tel"  id="phoneNumber" name="phoneNumber" className="w-full p-2 border border-gray-300 rounded-md mt-1" required />
         </div>
-
+{/* third input for clients address */}
         <div>
           <label htmlFor="address" className="block text-sm font-semibold">Address</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            className="w-full p-2 border border-gray-300 rounded-md mt-1"
-            required
-          />
+          <input  type="text" id="address" name="address" className="w-full p-2 border border-gray-300 rounded-md mt-1" required />
         </div>
 </div>
 <div className='space-y-2'>
@@ -66,12 +50,9 @@ export default function Page() {
         {/* Drop-off Date */}
         <div>
           <label htmlFor="dropOffDate" className="block text-sm font-semibold">Drop-off date (optional)</label>
-          <input
-            type="date"
-            id="dropOffDate"
-            name="dropOffDate"
-            className="w-full p-2 border border-gray-300 rounded-md mt-1"
-          />
+        <BookingInputComponent name='dopOffDate' type='date'/>
+          
+          
         </div>
 
         {/* Special Requests */}
@@ -98,4 +79,11 @@ export default function Page() {
       </form>
     </div>
   );
+}
+
+function BookingInputComponent({name,type}:{name:string, type:string}){
+  return(
+          <input type={type} name={name} className="w-full p-2 border border-gray-300 rounded-md mt-1" />
+      
+  )
 }

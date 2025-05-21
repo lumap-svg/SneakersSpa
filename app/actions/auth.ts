@@ -17,15 +17,17 @@ export async function signup(state:FormState, formData: FormData) {
         return { error: validatedFields.error.flatten().fieldErrors }
     }
     else {
+        const {name, email, password } = validatedFields.data
     console.log("form data validation was a success")
+    console.log('User signed up with:', name, email)
+    
   }
     // if (password !== confirmPassword) {
     //     return { error: 'Passwords do not match' }
     // }
     
     // // Simulate a signup process
-    // console.log('User signed up with:', { validatedFields. , email, password })
-    // return { success: true }
+
         return {
         message: 'Account created successfully!',
     }
