@@ -9,9 +9,9 @@ export default function Home() {
     <div className="w-full h-screen ">
       {/* https://www.pinterest.com/pin/shoe-clean-service-landing-page--1054264594003232096/ */}
  
-    <Header />
+  
     <main className="max-w-6xl mx-auto mt-4 ">
-
+<Header />
       {/* welcoming heros landing page */}
       
       <Heroslanding />

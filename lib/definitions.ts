@@ -27,3 +27,25 @@ export type FormState =
       message?: string
     }
   | undefined
+
+  // types/booking.ts
+export interface Booking {
+  id: string;
+  name: string;
+  phoneNumber: string;
+  address: string;
+  serviceType: string;
+  quantity: number;
+  dropOffDate?: string;
+  specialRequests?: string;
+}
+export interface BookingFormData {
+  name: string;
+  phoneNumber: string;
+  email?: string;
+  address: string;
+  serviceType: string;
+  quantity: number;
+  dropOffDate?: string;
+  specialRequests?: string;
+}
