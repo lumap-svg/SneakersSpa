@@ -32,7 +32,7 @@ export default function Header() {
               <Link href="/booking" className="hover:text-blue-500">
                 Book Now
               </Link>
-              <Link href="/faq" className="hover:text-blue-500">
+              <Link href="/faqs" className="hover:text-blue-500">
                 FAQ
               </Link> 
              

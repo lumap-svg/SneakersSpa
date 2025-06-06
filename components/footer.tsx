@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaFacebookF, FaInstagram, FaTiktok, FaTwitter } from 'react-icons/fa6';
 
 function Footer() {
@@ -39,11 +40,11 @@ function Footer() {
   
           {/* Quick Links Section */}
           <div>
-            <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>🏠 Home</li>
-              <li>🛠️ Services</li>
-              <li> 📅 Book Now</li>
+            <h3 className="text-xl font-semibold mb-4">Quick Links</h3> 
+            <ul className="space-y-2 flex flex-col">
+              <Link href={'/'}>🏠 Home</Link>
+              <Link href={'/services'}>🛠️ Services</Link>
+              <Link href={'/booking'}> 📅 Book Now</Link>
             </ul>
           </div>
   
