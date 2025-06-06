@@ -4,18 +4,18 @@ import 'react-datepicker/dist/react-datepicker.css';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-interface Order {
-  id: string;
-  name: string;
-  phone: string;
-  email: string;
-  address: string;
-  serviceType: string;
-  quantity: number;
-  dropOffDate?: string;
-  specialRequests?: string;
-  status: string;
-}
+// interface Order {
+//   id: string;
+//   name: string;
+//   phone: string;
+//   email: string;
+//   address: string;
+//   serviceType: string;
+//   quantity: number;
+//   dropOffDate?: string;
+//   specialRequests?: string;
+//   status: string;
+// }
 
 // Sample Data (30 orders)
 // const sampleOrders: Order[] = Array.from({ length: 30 }, (_, i) => ({

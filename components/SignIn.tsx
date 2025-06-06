@@ -70,7 +70,7 @@ export function SignInto(){
   )
 }
 export function SignUp(){
-  const [state, action, pending] = useActionState(signup,undefined)
+  const [state, action] = useActionState(signup,undefined)
 
   return(
     <div className='w-full grid sm:grid-cols-2   py-3 px-2 rounded-md'>
