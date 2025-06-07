@@ -3,7 +3,6 @@ import React, { useActionState, useState } from 'react';
 import { InputComponent } from './InputComponent';
 import Link from 'next/link';
 import { signin, signup } from '@/app/actions/auth';
-import { initialize } from 'next/dist/server/lib/render-server';
 // import { signin, signup } from '@/app/actions/auth';
 
 export default function SignIn() {
@@ -85,6 +84,12 @@ export function SignInto() {
             Forgot password?
           </Link>
         </div>
+           {state?.message && (
+          <p className="text-green-600 text-sm font-medium">{state.message}</p>
+        )}
+        {state?.error?.email && (
+          <p className="text-red-500 text-sm">{state.error.name}</p>
+        )}
 
         <button
           type="submit"

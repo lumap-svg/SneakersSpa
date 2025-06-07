@@ -173,6 +173,12 @@ export default function Page() {
 
     </div>
           <div className="pt-2 md:col-span-2">
+               {state?.message && (
+          <p className="text-green-600 text-sm font-medium">{state.message}</p>
+        )}
+        {state?.errors?.name && (
+          <p className="text-red-500 text-sm">{state.errors.name}</p>
+        )}
         <button
           type="submit"
           className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md text-lg font-semibold"
