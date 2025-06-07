@@ -1,13 +1,17 @@
-
+'use client'
 import Header from '@/components/Header';
 import Link from 'next/link';
+import { useActionState } from 'react';
 import { FaAngleLeft } from 'react-icons/fa6';
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
-// import { useState } from "react";
+import { BookingAction } from '../actions/actions';
 
 export default function Page() {
-   
+ 
+  const [state, action] = useActionState(BookingAction, {
+    error: {},
+    message: undefined,
+  })
+       
   return (
     <>
       <Header />
@@ -23,7 +27,7 @@ export default function Page() {
   </div>
 
   {/* Booking Form */}
-  <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <form className="grid grid-cols-1 md:grid-cols-2 gap-6" action={action}>
     {/* Left Column */}
     <div className="space-y-4">
       {/* Name */}
@@ -177,18 +181,3 @@ export default function Page() {
     </>
   );
 }
-
-
-// function BookingForm() {
-//   const [dropOffDate, setDropOffDate] = useState<Date | null>(null);
-
-//   return (
-//     <DatePicker
-//       selected={dropOffDate}
-//       onChange={(date) => setDropOffDate(date)}
-//       placeholderText="Select drop-off date"
-//       className="w-full p-2 border border-gray-300 rounded-md"
-//       dateFormat="yyyy-MM-dd"
-//     />
-//   );
-// }

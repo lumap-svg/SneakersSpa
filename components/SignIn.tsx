@@ -2,7 +2,9 @@
 import React, { useActionState, useState } from 'react';
 import { InputComponent } from './InputComponent';
 import Link from 'next/link';
-import { signup } from '@/app/actions/auth';
+import { signin, signup } from '@/app/actions/auth';
+import { initialize } from 'next/dist/server/lib/render-server';
+// import { signin, signup } from '@/app/actions/auth';
 
 export default function SignIn() {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -45,18 +47,23 @@ export default function SignIn() {
 }
 
 export function SignInto() {
+  
+  const [state, action] = useActionState(signin, {
+    error: {},
+    message: undefined,
+  });
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
       <div className="hidden md:flex justify-center items-center bg-gray-100 p-6 rounded-md">
         <h2 className="text-xl font-bold uppercase text-gray-700">Sign In</h2>
       </div>
 
-      <form className="space-y-4 w-full" action="">
+      <form className="space-y-4 w-full" action={action}>
         <div>
           <label htmlFor="name" className="block mb-1 font-medium text-sm text-gray-700">
             Name
           </label>
-          <InputComponent type="text" placeholder="Enter your name" />
+          <InputComponent type="name" placeholder="Enter your name" />
         </div>
 
         <div>
@@ -91,7 +98,10 @@ export function SignInto() {
 }
 
 export function SignUp() {
-  const [state, action] = useActionState(signup, undefined);
+  const [state, action] = useActionState(signup,{
+    error: {},
+    message: undefined,
+  });
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">

@@ -2,176 +2,10 @@
 
 import 'react-datepicker/dist/react-datepicker.css';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-// interface Order {
-//   id: string;
-//   name: string;
-//   phone: string;
-//   email: string;
-//   address: string;
-//   serviceType: string;
-//   quantity: number;
-//   dropOffDate?: string;
-//   specialRequests?: string;
-//   status: string;
-// }
-
-// Sample Data (30 orders)
-// const sampleOrders: Order[] = Array.from({ length: 30 }, (_, i) => ({
-//   id: `ORD${i + 1}`,
-//   name: `Customer ${i + 1}`,
-//   phone: `07123456${String(i + 10).padStart(2, "0")}`,
-//   email: `customer${i + 1}@example.com`,
-//   address: `Address ${i + 1}`,
-//   serviceType: i % 3 === 0 ? "Premium" : i % 3 === 1 ? "Standard" : "Specialized",
-//   quantity: (i % 5) + 1,
-//   dropOffDate: `2025-06-${String((i % 28) + 1).padStart(2, "0")}`,
-//   specialRequests: i % 4 === 0 ? "Remove mud stains" : "",
-//   status: i % 4 === 0 ? "Pending" : "Completed",
-// }));
-
-// export default function Dashboard() {
-//   const [orders, setOrders] = useState<Order[]>(sampleOrders);
-//   const [searchTerm, setSearchTerm] = useState("");
-//   const [notification, setNotification] = useState<string | null>(null);
-//   const [currentPage, setCurrentPage] = useState(1);
-
-//   const itemsPerPage = 10;
-
-//   // Filter orders by searchTerm on id or name
-//   const filteredOrders = orders
-//     .filter(order =>
-//       order.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-//       order.name.toLowerCase().includes(searchTerm.toLowerCase())
-//     )
-//     .sort((a, b) => b.id.localeCompare(a.id)); // Most recent first by ID desc
-
-//   // Pagination slicing
-//   const totalPages = Math.ceil(filteredOrders.length / itemsPerPage);
-//   const paginatedOrders = filteredOrders.slice(
-//     (currentPage - 1) * itemsPerPage,
-//     currentPage * itemsPerPage
-//   );
-
-//   // Mark order completed handler
-//   const markCompleted = (orderId: string) => {
-//     setOrders(prevOrders =>
-//       prevOrders.map(order =>
-//         order.id === orderId ? { ...order, status: "Completed" } : order
-//       )
-//     );
-//     setNotification(`Order ${orderId} marked as completed!`);
-//     setTimeout(() => setNotification(null), 3000);
-//   };
-
-//   // Reset page when search term changes
-//   useEffect(() => {
-//     setCurrentPage(1);
-//   }, [searchTerm]);
-
-//   return (
-//     <div className="p-6 max-w-7xl mx-auto">
-//       {/* Search Bar */}
-//       <input
-//         type="text"
-//         placeholder="Search by Order ID or Name"
-//         className="border border-gray-300 p-2 rounded-md w-full max-w-sm mb-4"
-//         value={searchTerm}
-//         onChange={e => setSearchTerm(e.target.value)}
-//       />
-
-//       {/* Notification */}
-//       {notification && (
-//         <div className="mb-4 p-3 bg-green-200 text-green-800 rounded-md">
-//           {notification}
-//         </div>
-//       )}
-
-//       {/* Orders Table */}
-//       <div className="overflow-auto max-h-[600px] border rounded-md shadow-md">
-//         <table className="w-full border-collapse table-auto text-left">
-//           <thead className="sticky top-0 bg-gray-100 border-b border-gray-300">
-//             <tr>
-//               <th className="p-2 border-r">Order ID</th>
-//               <th className="p-2 border-r">Name</th>
-//               <th className="p-2 border-r">Phone</th>
-//               <th className="p-2 border-r">Email</th>
-//               <th className="p-2 border-r">Address</th>
-//               <th className="p-2 border-r">Service Type</th>
-//               <th className="p-2 border-r">Quantity</th>
-//               <th className="p-2 border-r">Drop-off Date</th>
-//               <th className="p-2 border-r">Special Requests</th>
-//               <th className="p-2 border-r">Status</th>
-//               <th className="p-2">Actions</th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {paginatedOrders.length === 0 && (
-//               <tr>
-//                 <td colSpan={11} className="p-4 text-center text-gray-500">
-//                   No orders found.
-//                 </td>
-//               </tr>
-//             )}
-
-//             {paginatedOrders.map(order => (
-//               <tr key={order.id} className="border-b text-yellow-300 hover:bg-gray-50">
-//                 <td className="p-2 border-r">{order.id}</td>
-//                 <td className="p-2 border-r">{order.name}</td>
-//                 <td className="p-2 border-r">{order.phone}</td>
-//                 <td className="p-2 border-r">{order.email}</td>
-//                 <td className="p-2 border-r">{order.address}</td>
-//                 <td className="p-2 border-r">{order.serviceType}</td>
-//                 <td className="p-2 border-r">{order.quantity}</td>
-//                 <td className="p-2 border-r">{order.dropOffDate || "-"}</td>
-//                 <td className="p-2 border-r">{order.specialRequests || "-"}</td>
-//                 <td className={`p-2 border-r font-semibold ${order.status === "Completed" ? "text-green-600" : "text-blue-600"}`}>
-//                   {order.status}
-//                 </td>
-//                 <td className="p-2">
-//                   {order.status !== "Completed" && (
-//                     <button
-//                       className="bg-blue-600 text-white px-3 py-1 rounded-md hover:bg-blue-700"
-//                       onClick={() => markCompleted(order.id)}
-//                     >
-//                       Mark Completed
-//                     </button>
-//                   )}
-//                 </td>
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-
-//       {/* Pagination */}
-//       <div className="flex justify-between items-center mt-4 max-w-sm">
-//         <button
-//           className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
-//           disabled={currentPage === 1}
-//           onClick={() => setCurrentPage(prev => prev - 1)}
-//         >
-//           Previous
-//         </button>
-//         <span>
-//           Page {currentPage} of {totalPages}
-//         </span>
-//         <button
-//           className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
-//           disabled={currentPage === totalPages}
-//           onClick={() => setCurrentPage(prev => prev + 1)}
-//         >
-//           Next
-//         </button>
-//       </div>
-//     </div>
-//   );
-// }
-
 import { useState} from 'react';
 import DatePicker from 'react-datepicker';
 import { toast, ToastContainer } from 'react-toastify';
+
 
 const sampleOrders = Array.from({ length: 42 }, (_, i) => ({
   id: `ORD${100 + i}`,
@@ -213,23 +47,13 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="flex h-screen">
-      {/* Sidebar */}
-      <aside className="w-60 bg-gray-900 text-white p-4 hidden md:block">
-        <h2 className="text-xl font-bold mb-6">Sneakers Spa</h2>
-        <ul className="space-y-4">
-          <li className="text-blue-400">Dashboard</li>
-          <li>Orders</li>
-          <li>Customers</li>
-          <li>Reports</li>
-        </ul>
-      </aside>
-
+    <div className="flex ">
+          
       {/* Main Content */}
       <main className="flex-1 bg-gray-100 p-6 overflow-auto">
         <ToastContainer />
         <header className="flex flex-col md:flex-row justify-between items-center mb-6 gap-3">
-          <h1 className="text-2xl font-bold">Order Dashboard</h1>
+          <h1 className="text-2xl font-bold">Orders</h1>
           <input
             type="text"
             placeholder="Search by name or ID..."
@@ -354,4 +178,3 @@ export default function DashboardPage() {
     </div>
   );
 }
-// Note: This code uses react-datepicker and react-toastify for date selection and notifications.
