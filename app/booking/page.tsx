@@ -8,7 +8,12 @@ import { BookingAction } from '../actions/actions';
 export default function Page() {
  
   const [state, action] = useActionState(BookingAction, {
-    error: {},
+    errors: {
+      name: [],
+      phoneNumber: [],
+      address: [],
+      quantity: [],
+    },
     message: undefined,
   })
        
