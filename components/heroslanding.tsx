@@ -7,19 +7,19 @@ export default function Heroslanding() {
   return (
     <div className="flex flex-col md:flex-row my-6 pr-4 md:pr-12  rounded-lg shadow-lg overflow-hidden">
       {/* Image */}
-      <div className="relative w-full md:w-1/2 mb-6 md:mb-0">
-        <Image
-          className="rounded-lg object-cover  "
-          // src="/daniel-storek-JM-qKEd1GMI-unsplash.jpg"
-          src={'/sneaker-wash.jpeg'}
-          width={1200}
-          height={800}
-          layout="responsive"
-          priority
-          sizes="(max-width: 768px) 100vw, 50vw"
-          alt="Shoe game"
-        />
-      </div>
+        <div className="relative w-full md:w-1/2 mb-6 md:mb-0 overflow-hidden rounded-br-3xl rounded-tl-3xl">
+          <Image
+            className="object-contain w-full h-full"
+            src="/sneaker-wash.jpeg"
+            width={1200}
+            height={800}
+            layout="responsive"
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
+            alt="Shoe game"
+          />
+        </div>
+
 
       {/* Message Section */}
       <div className="flex flex-col justify-center text-center md:text-left md:w-1/2 px-6 md:px-12 py-6">
